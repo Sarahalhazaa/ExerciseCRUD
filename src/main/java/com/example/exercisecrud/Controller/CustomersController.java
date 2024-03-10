@@ -48,7 +48,7 @@ public class CustomersController {
         return new  ApiResponse("No money has been deposited");
     }
 
-    @GetMapping("/withdraw/{id}/{amount}")
+    @PutMapping("/withdraw/{id}/{amount}")
     public  ApiResponse withdraw(@PathVariable String id,@PathVariable int amount) {
         for (Customers customer : customers){
         if (customer.getID().equals(id)){
